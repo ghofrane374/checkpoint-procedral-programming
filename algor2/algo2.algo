@@ -1,0 +1,29 @@
+FUNCTION dot product(V1 : ARRAY_OF INTEGER[3]; V2 : ARRAY_OF INTEGER[3]) : INTEGER
+VAR
+ i: INTEGER;
+ps:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        write("donner le vecteur v1")
+        read(v1)
+        write("donner le vecteur u1")
+        read(u1)
+        END_FOR  
+        FOR i FROM 0 TO 2 STEP 1  DO
+            ps:= ps +  v1(i) * u1(i)
+            write("le produit sclaire des vecteurs v1 et v2 est":,ps)
+        END_FOR
+    RETURN ps;
+END
+ALGORITHM orthogonal
+VAR
+ps2:INTEGER.
+BEGIN
+dot product(v1;v2 )
+    IF (PS:=0) THEN
+    write("v1 et v2 sont deux vecteurs orthogonaux")
+    ELSE
+        write("v1 et v2 ne sont pas orthogonaux")
+   
+    END_IF
+END
